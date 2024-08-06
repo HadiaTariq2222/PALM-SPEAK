@@ -1,0 +1,87 @@
+{% include 'base.html' %}
+{% block start %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+    <header>
+         <!-- hamburger menu code  -->
+        <nav class="navbar">
+                <div class="menu-toggle" onclick="toggleMenu()">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+                <ul class="menu">
+                    <li class="nav_items">
+                        <a href="{% url 'home_page' %}" class="nav_links" target="_blank">Home</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="{% url 'about_us' %}" class="nav_links" target="_blank">About Us</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="{% url 'contact_us' %}" class="nav_links" target="_blank">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- navigation bar -->
+            <div class="logo-container">
+                <img src="{% static 'hand image.png' %}" alt="hand image" width="20px" ><h3>PalmSpeak</h3> 
+            </div>
+    </header>
+    <!-- main body of webpage -->
+    <section>
+        {% if messages %}
+                
+        {% for message in messages %}
+        <div class="alert alert-info">
+            {{ message }}
+        </div>
+        {% endfor %}
+  
+        {% endif %}
+        <form method="post" >
+            {% csrf_token %}
+            <div class="register">
+                <h4>Registration</h4>
+            </div>
+            <br><br>
+            <form>
+            <div class="register1">
+                <div class="username">
+                    <label for="LName">Full name:</label>
+                    <input type="text" placeholder="Full Name" name="username" id="username" class="input-field" autocomplete="off" required>
+                </div>
+                <br>
+                <div class="email">
+                    <label for="email">Email Address:</label>
+                    <input type="email" placeholder="Email Adress" name="email" id="email" class="input-field" autocomplete="off" required>
+                </div>
+                <br>
+                <div class="password">
+                    <label for="password">Password:</label>
+                    <input type="password" placeholder="Password" name="password" id="password" class="input-field" autocomplete="off" required>
+                </div>
+                <br>
+                <div class="confirmpassword">
+                    <label for="Cpassword">Confirm Password:</label>
+                    <input type="password" placeholder="Confirm Password" name="Cpassword" id="Cpassword" class="input-field" autocomplete="off" required>
+                </div>
+                <!-- registerbutton -->
+                <a href="{% url 'token_send' %}" onclick="return validate()" target="_blank"><button class="button">Register</button></a>
+            </form>
+   
+            </div>
+        </form>
+        <img src="{% static 'Picture1.png' %}" alt="logo of PalmSpeak" class="logo">
+    </section>
+    <script src="{% static 'regscript.js' %}"></script>
+</body>
+</html>
+{% endblock %}

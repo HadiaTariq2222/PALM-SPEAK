@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background:linear-gradient(to right, #f0f0f0 7%, #b7d1df 70px)
+  }
+  .logo-container {
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    display: flex;
+    align-items: center;
+    color: #1a7980;
+}
+  .navbar {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start; /* Align the menu to the left */
+    align-items: center;
+    position: relative;
+  }
+  
+  .menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #1a7980;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    left: 0;
+    background-color: #39A3AA;
+    box-shadow: 0 0 10px #C1D7E1;
+  }
+  
+  .menu.show {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu li {
+    padding: 15px;
+    text-align: center;
+  }
+  .logo{
+    position: absolute;
+    top: 50%;
+    right: 40px; /* Adjust as needed */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+  }
+  .slogan{
+    position: absolute;
+    top: 50%;
+    left: 150px; /* Adjust as needed */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    color: #1a7980;
+    
+  }
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .content {
+    padding: 20px;
+  }
+  .button{
+    width: 150px;
+  height: 40px;
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  transform: translate(-50%,50%); /* Center the button */
+  font-size: large;  
+  font-weight: bolder;
+  background-color: #39A3AA;
+  color: #FBF2F2;
+  border: azure;
+  border-radius: 10px;
+  cursor: pointer;
+}

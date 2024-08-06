@@ -1,0 +1,57 @@
+{% include 'base.html' %}
+{% block start %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Success</title>
+
+    <link rel="stylesheet" href="{% static 'token_send.css' %}">
+    
+</head>
+<body>
+  
+    <header>
+         <!-- hamburger menu code  -->
+        <nav class="navbar">
+                <div class="menu-toggle" onclick="toggleMenu()">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+                <ul class="menu">
+                    <li class="nav_items">
+                        <a href="index.html" class="nav_links" target="_blank">Home</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="indAboutUs.html" class="nav_links" target="_blank">About Us</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="indContactUs.html" class="nav_links" target="_blank">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- navigation bar -->
+            <div class="logo-container">
+                <img src="hand image.png" alt="hand image" width="20px" ><h3>PalmSpeak</h3> 
+            </div>
+    </header>
+    
+    <!-- main body of webpage -->
+    
+    <section>
+        <div class="message">
+            <h1>We have sent you a message plz check that!!!</h1>
+        </div>
+        <img src="Picture1.png" alt="logo of PalmSpeak" class="logo">
+    </section>
+   
+    
+   
+
+</body>
+</html>
+{% endblock %}

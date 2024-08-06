@@ -1,0 +1,90 @@
+{% include 'base.html' %}
+{% block start %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'loginpage.css' %}">
+    <!-- to get the icons from font awesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+         <!-- hamburger menu code  -->
+        <nav class="navbar">
+                <div class="menu-toggle" onclick="toggleMenu()">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+                <ul class="menu">
+                    <li class="nav_items">
+                        <a href="{% url 'home_page' %}" class="nav_links" target="_blank">Home</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="{% url 'about_us' %}" class="nav_links" target="_blank">About Us</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="{% url 'contact_us' %}" class="nav_links" target="_blank">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- navigation bar -->
+            <div class="logo-container">
+                <img src="{% static 'hand image.png' %}" alt="hand image" width="20px" ><h3>PalmSpeak</h3> 
+            </div>
+    </header>
+    <!-- main body of webpage -->
+    
+    <section>
+        <br><br>
+        {% if messages %}
+                
+        {% for message in messages %}
+        <div class="alert alert-info">
+            {{ message }}
+        </div>
+        {% endfor %}
+  
+        {% endif %}
+        <br>
+        <div class="login">
+            <h4>User Login</h4>
+        </div>
+        <br><br>
+       
+       
+        <!-- login form -->
+        <form method="post" >
+            {% csrf_token %}
+            <div class="login1">
+            <label for="username">User Name:</label> 
+                <!-- <br><br> -->
+               <div class="input-container">
+                
+                <!-- <i class="fa fa-user icon userIcon"></i> -->
+                <input type="text" placeholder="username" name="username" id="username" class="input-field" autocomplete="off" required/>
+                <i class="fa fa-lock icon lockIcon"></i>  
+            </div>
+                <br>
+                <label for="password">Password:</label>
+                <br><br>
+                <div class="input-container">
+                    <input type="password" placeholder="password" name="password" id="password" class="input-field" autocomplete="off" required>
+                    <i class="fa fa-lock icon lockIcon"></i>
+                </div>
+                <span class="forgetPass"><a href="{% url 'forgot_password' %}" target="_blank">Forget password</a></span>
+                <!-- login button -->
+                <button class="button">Log In</button>
+            </div>
+        </form>
+        <img src="{% static 'Picture1.png' %}" alt="logo of PalmSpeak" class="logo">
+    </section>
+   
+    <script src="{% static 'loginScript.js' %}"> </script>
+</body>
+</html>
+{% endblock %}

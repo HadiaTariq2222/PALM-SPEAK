@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background:linear-gradient(to right, #f0f0f0 7%, #b7d1df 70px)
+  }
+  .logo-container {
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    display: flex;
+    align-items: center;
+    color: #1a7980;
+}
+  .navbar {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start; /* Align the menu to the left */
+    align-items: center;
+    position: relative;
+  }
+  
+  .menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #1a7980;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    left: 0;
+    background-color: #39A3AA;
+    box-shadow: 0 0 10px #C1D7E1;
+  }
+  
+  .menu.show {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu li {
+    padding: 15px;
+    text-align: center;
+  }
+  .logo{
+    position: absolute;
+    top: 50%;
+    right: 40px; /* Adjust as needed */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+  }
+.message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:  #1a7980;
+}
+p{
+    font-size: large;
+}
+.button{
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 35%;
+  transform: translate(-50%,50%); /* Center the button */
+  font-size: large;  
+  font-weight: bolder;
+  background-color: #39A3AA;
+  color: #FBF2F2;
+  border: azure;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.button {
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    font-size: large;
+    font-weight: bolder;
+    background-color: #39A3AA;
+    color: #FBF2F2;
+    border: 1px solid azure;
+    border-radius: 10px;
+    cursor: pointer;
+    line-height: 40px; /* Equal to the height of the button */
+    text-decoration: none; 
+  }
+.button span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal; /* Reset line-height for the text */
+  }

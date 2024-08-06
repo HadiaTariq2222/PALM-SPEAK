@@ -1,0 +1,99 @@
+{% include 'base.html' %}
+{% block start %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'indontactUs.css' %}">
+    <title>Contact Us</title>
+</head>
+<body>
+    <header>
+        <!-- hamburger menu code  -->
+       <nav class="navbar">
+               <div class="menu-toggle" onclick="toggleMenu()">
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+               </div>
+               <ul class="menu">
+                   <li class="nav_items">
+                       <a href="{% url 'home_page' %}" class="nav_links" target="_blank">Home</a>
+                   </li>
+                   <li class="nav_items">
+                       <a href="{% url 'about_us' %}" class="nav_links" target="_blank">About Us</a>
+                   </li>
+                   <li class="nav_items">
+                       <a href="{% url 'contact_us' %}" class="nav_links" target="_blank">Contact Us</a>
+                   </li>
+               </ul>
+           </nav>
+           <!-- navigation bar -->
+           <div class="logo-container">
+               <img src="{% static 'hand image.png' %}" alt="hand image" width="20px" ><h3>PalmSpeak</h3> 
+           </div>
+   </header>
+   <!-- main body of webpage -->
+   <section>
+       <div class="slogan">
+           <h5>
+               Your Voice In Every Gesture
+           </h5>
+       </div>
+       <div class="ContactTbl">
+        <p>
+            You can contact us through all these emails
+          <table  border="1" >
+            <caption class="Tbl-caption">Project Members</caption>
+            <thead>
+                <tr>
+                 <th>Name</th>
+                 <th>Roll No</th>
+                 <th>Email Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maria Haroon</td>
+                    <td>20011598-058</td>
+                    <td>20011598-058@uog.edu.pk</td>
+                </tr>
+                <tr>
+                    <td>Arooba Qaiser</td>
+                    <td>20011598-060</td>
+                    <td>20011598-060@uog.edu.pk</td>
+                </tr>
+                <tr>
+                    <td>Hadia Tahir</td>
+                    <td>20011598-082</td>
+                    <td>20011598-082@uog.edu.pk</td>
+                </tr>
+            </tbody>
+          </table> 
+          <br> <br>  
+          <table border="1">
+            <caption class="Tbl-caption">Project Manager</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mirza Ahsan Ullah</td>
+                    <td>ahsan@uog.edu.pk</td>
+                </tr>
+            </tbody>
+          </table>
+
+        </p>
+       </div>
+       <img src="{% static 'Picture1.png' %}" alt="logo of PalmSpeak" class="logo"> 
+   </section>
+   <script src="{% static 'indContactUs.js' %}"></script>
+</body>
+</html>
+{% endblock %}

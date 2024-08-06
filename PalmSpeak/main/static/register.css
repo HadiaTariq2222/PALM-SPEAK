@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background:linear-gradient(to right, #f0f0f0 7%, #b7d1df 70px)
+  }
+  .logo-container {
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    display: flex;
+    align-items: center;
+    color: #1a7980;
+}
+  .navbar {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start; /* Align the menu to the left */
+    align-items: center;
+    position: relative;
+  }
+  
+  .menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #1a7980;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    left: 0;
+    background-color: #39A3AA;
+    box-shadow: 0 0 10px #C1D7E1;
+  }
+  
+  .menu.show {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu li {
+    padding: 15px;
+    text-align: center;
+  }
+  .logo{
+    position: absolute;
+    top: 50%;
+    right: 40px; /* Adjust as needed */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+  }
+  .register{
+    position: absolute;
+    top: 20%;
+    left: 350px; 
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    color: #1a7980;
+  }
+  .register1{
+    position: absolute;
+    top: 30%;
+    left: 250px; 
+    align-items: center;
+    font-weight: bolder;
+    border-width: 50px;
+    color: #1a7980;
+  }
+
+.username {
+  display: flex;
+  flex-direction: column;
+}
+.email {
+  display: flex;
+  flex-direction: column;
+}
+.password {
+  display: flex;
+  flex-direction: column;
+}
+.confirmpassword {
+  display: flex;
+  flex-direction: column;
+}
+  .label {
+    width: 150px; 
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  .input-field{
+    background-color: #ECE2E2;
+    width: 256px;
+    height: 30px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border-color: #ECE2E2;
+    outline: 0;
+  }
+    ::placeholder {
+    color: #39A3AA;
+    opacity: 1; /* Firefox */
+  }
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #39A3AA;
+  }
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  .content {
+    padding: 20px;
+  }
+  .button{
+    width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,50%); /* Center the button */
+  font-size: large;  
+  font-weight: bolder;
+  background-color: #39A3AA;
+  color: #FBF2F2;
+  border: azure;
+  border-radius: 10px;
+  cursor: pointer;
+}

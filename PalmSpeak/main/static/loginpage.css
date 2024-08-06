@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background:linear-gradient(to right, #f0f0f0 7%, #b7d1df 70px)
+  }
+  .logo-container {
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    display: flex;
+    align-items: center;
+    color: #1a7980;
+}
+.navbar {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start; /* Align the menu to the left */
+    align-items: center;
+    position: relative;
+  }
+  
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #1a7980;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    left: 0;
+    background-color: #39A3AA;
+    box-shadow: 0 0 10px #C1D7E1;
+  }
+  
+.menu.show {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.menu li {
+    padding: 15px;
+    text-align: center;
+  }
+.logo{
+    position: absolute;
+    top: 50%;
+    right: 40px; /* Adjust as needed */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+  }
+.login{
+    position: absolute;
+    top: 25%;
+    left: 350px; /* Adjust as needed */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    color: #1a7980;
+  }
+.login1{
+    position: absolute;
+    top: 40%;
+    left: 300px; /* Adjust as needed */
+    align-items: center;
+    font-weight: bolder;
+  }
+label{
+    color: #1a7980;
+    font-weight: bold;
+  }
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+.input-field {
+    background-color: #ECE2E2;
+    width: 256px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: #ECE2E2;
+    outline: 0;
+     padding-left: 40px; /* for user icon */
+     padding-right: 40px; /*for lock icon*/
+    padding: 10px;
+    box-sizing: border-box; /* Add this line to include padding in width */
+    text-indent: 20px;
+}
+/* icon setting */
+.userIcon{
+  color: #39A3AA;
+  left: 10px;
+}
+.lockIcon{
+  color: #39A3AA;
+  right: 30px;
+}
+.input-container .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  ::placeholder {
+    color: #39A3AA;
+    opacity: 1; /* Firefox */
+  }
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #39A3AA;
+  }
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  a{
+    text-decoration: none;
+  }
+  .content {
+    padding: 20px;
+  }
+  .forgetPass{
+    font-size: smaller;
+    color: #1a7980 !important; /*rule to ensure that the specified color is applied*/
+  }
+
+  .button{
+    width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,50%); /* Center the button */
+  font-size: large;  
+  font-weight: bolder;
+  background-color: #39A3AA;
+  color: #FBF2F2;
+  border: azure;
+  border-radius: 10px;
+  cursor: pointer;
+}

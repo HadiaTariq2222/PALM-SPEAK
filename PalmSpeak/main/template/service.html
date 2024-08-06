@@ -1,0 +1,57 @@
+{% include 'base.html' %}
+{% block start %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gesture to Word</title>
+    <link rel="stylesheet" href="{% static 'service.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Hamburger menu code -->
+        <nav class="navbar">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="menu">
+                <li class="nav_items">
+                    <a href="{% url 'home_page' %}" class="nav_links">Home</a>
+                </li>
+                <li class="nav_items">
+                    <a href="{% url 'about_us' %}" class="nav_links">About Us</a>
+                </li>
+                <li class="nav_items">
+                    <a href="{% url 'contact_us' %}" class="nav_links">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Navigation bar -->
+        <div class="logo-container">
+            <img src="{% static 'hand image.png' %}" alt="hand image" width="20px">
+            <h3>PalmSpeak</h3>
+        </div>
+    </header>
+    <!-- Main body of webpage -->
+    <section>
+        <div class="center-content">
+            <h3>Welcome to PalmSpeak, a platform designed to bridge the communication gap for the Deaf and Mute community <br>using advanced hand gesture recognition. Our AI-powered model translates hand gestures into words,<br> making communication seamless and accessible for everyone.</h3>
+            <h3>Click the button below to access our AI model and start recognizing hand gestures:</h3>
+            <div class="button-container">
+                
+                <form id="execution-form" method="POST">
+                    {% csrf_token %}
+                    <button class="button" type="submit">Capture Gesture</button>
+                </form>
+            </div>
+        </div>
+        <img src="{% static 'Picture1.png' %}" alt="logo of PalmSpeak" class="logo">
+    </section src="{% static 'service.js' %}"><script >  
+</script>
+</body>
+</html>
+{% endblock %}

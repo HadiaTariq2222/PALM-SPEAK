@@ -1,0 +1,75 @@
+{% include 'base.html' %}
+{% block start %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'indAboutUs.css' %}">
+    <title>About Us</title>
+</head>
+<body>
+    <header>
+        <!-- hamburger menu code  -->
+       <nav class="navbar">
+               <div class="menu-toggle" onclick="toggleMenu()">
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+               </div>
+               <ul class="menu">
+                   <li class="nav_items">
+                       <a href="{% url 'home_page' %}" class="nav_links" target="_blank">Home</a>
+                   </li>
+                   <li class="nav_items">
+                       <a href="{% url 'about_us' %}" class="nav_links" target="_blank">About Us</a>
+                   </li>
+                   <li class="nav_items">
+                       <a href="{% url 'contact_us' %}" class="nav_links" target="_blank">Contact Us</a>
+                   </li>
+               </ul>
+           </nav>
+           <!-- navigation bar -->
+           <div class="logo-container">
+               <img src="{% static 'hand image.png' %}" alt="hand image" width="20px" ><h3>PalmSpeak</h3> 
+           </div>
+   </header>
+   <!-- main body of webpage -->
+   <section>
+       <div class="slogan">
+           <h5>
+               <q>Your Voice In Every Gesture</q>
+           </h5>
+       </div>
+       <div class="paragraph">
+        <p> 
+           <!-- About Us -->
+           <h4><u>About Us:</u></h4>
+           This is our <q><u>Final year project</u></q>. Our Superviser is <u>Mr. Mirza Ahsan Ullaha</u>. We are three members.    
+           <ul>
+            <li>Maria Haroon</li>
+            <li>Hadia Tariq</li>
+            <li>Arooba Qaiser</li>
+           </ul>
+           <hr>
+           <h4>
+           <u>About Our Project:</u> 
+           </h4>
+           The title of our project is <q><b>PalmSpeak</b></q> 
+           <br>
+           <h4><u>Introduction:</u></h4>
+           In a world considered by fast developments in technology and communication, there is a need to bridge communication gaps. This gap commonly exists between deaf and mute people and in those who talk through verbal language. Communication is a fundamental human need. In Pakistan, like several other countries, the Deaf people face a trial which is unavailability to a regular and broadly known sign language system. Due to this unavailability of standard language, they face a lot of social problems, but this also restricts them in employment and empowerment.
+           <br><br>
+            We will empower the Deaf and Muted community with a PSL hand gesture recognition which will facilitate unified communication with hearing individuals. We will create a Deaf and Muted community with a deep learning-based model with a user-friendly interface available for both deaf and muted community and normal users. Our system will ensure the standard sign language for communication based on PSL hand gestures.
+            <br><br>
+            To represent hand gestures different types of methods such as vision based and sensor based are used but in this project we will use vision based gesture recognition system in which we will capture the image of the user’s hand and then will adjust the size apply the deep learning based algorithm on that. vision based hand gesture recognition has made remarkable progress in the field of hand gesture recognition. 
+            <br><br>
+            Image processing technique will apply on it for extracting features of hands and then recognize the gestures.The input video that is captured from camera is transformed to a frame. Set of predefined features are extracted from each of these frames. Data pre-processing operation is then applied for extracting the features from it and cleaning, these extracted features is then stored for training. Extracted features are altered from different gesture. Input video isthen given to the hand gesture recognition system which convert the video into frames and extract out all the possible feature from the frames. These features are then compared and with the already stored features in the database to interpret the hand gesture
+        </p>
+       </div> 
+   </section>
+   <script src="{% static 'indAboutUs.css' %}""></script>
+</body>
+</html>
+{% endblock %}

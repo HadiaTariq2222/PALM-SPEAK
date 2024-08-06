@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Default Title{% endblock %}</title>
+    <!-- Other head content, including CSS links -->
+    {% block extra_head %}{% load static %}{% endblock %}
+</head>
+<body>
+    <!-- Header content -->
+    {% block header %}{% endblock %}
+
+    <!-- Content specific to each page -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Scripts at the end of body -->
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>
